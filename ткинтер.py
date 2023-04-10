@@ -24,7 +24,7 @@ frame = Frame(window, bg='cyan')
 frame.place(relx=0.150, rely=0.20, relwidth=0.7, relheight=0.7)
 # combobox
 combo = Combobox(frame)
-combo['values'] = ([i for i in range(1,101)])
+combo['values'] = ([i for i in range(1,51)])
 combo.current(0)
 combo.pack()
 # label
