@@ -1,7 +1,7 @@
 import pygame
 
 pygame.init()
-screen = pygame.display..set_mode((400, 400))
+screen = pygame.display.set_mode((400, 400))
 pygame.display.set_caption('Программа')
 running = True
 while running:

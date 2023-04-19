@@ -2,7 +2,6 @@ from googlesearch import search
 
 query = input('Введите запрос:\n')
 count = 0
-while count != 11:
-    for url in search(query):
+for url in search(query):
+    for i in range(10):
         print(url)
-        count += 1
