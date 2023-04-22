@@ -5,7 +5,7 @@ fake = Faker('ru_RU')
 print(dir(fake))
 
 
-print(f'Имя: {fake.name()}')
+print(f'Имя пользователя: {fake.name()}')
 print(fake.address())
 print(fake.phone_number())
 print(fake.city())
