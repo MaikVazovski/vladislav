@@ -1,5 +1,5 @@
 import numpy as np
-
+import time
 password_combinations = np.array(
     [
         [1, 0, 1],
@@ -27,26 +27,29 @@ input_data = password_combinations[0]
 # что хотим понять: открыто или закрыто?
 goal_prediction = locked_unlocked[0]
 
-for iteration in range(100):
+start_time = time.time()
+for i in range(1000):
+    for iteration in range(100):
 
-    # общая ошибка
-    error = 0
+        # общая ошибка
+        error = 0
 
-    print(f'Веса: {weights}')
+        # print(f'Веса: {weights}')
 
-    # вложенный цикл
-    for row in range(len(locked_unlocked)):
-        # prediction = input_data.dot(weights)
-        input_data = password_combinations[row]
-        goal_prediction = locked_unlocked[row]
+        # вложенный цикл
+        for row in range(len(locked_unlocked)):
+            # prediction = input_data.dot(weights)
+            input_data = password_combinations[row]
+            goal_prediction = locked_unlocked[row]
 
-        # прогноз
-        prediction = input_data.dot(weights)
-        # print(f'Предсказание: {prediction}')
-        # ошибка
-        delta = prediction - goal_prediction
-        error = delta**2
-        # изменяем веса
-        weights = weights - (alpha*(input_data*delta))
+            # прогноз
+            prediction = input_data.dot(weights)
+            # print(f'Предсказание: {prediction}')
+            # ошибка
+            delta = prediction - goal_prediction
+            error = delta**2
+            # изменяем веса
+            weights = weights - (alpha*(input_data*delta))
 
-    print(f'Ошибка: {float(error)} \n')
+        # print(f'Ошибка: {float(error)} \n')
+print('--- %s second ---' % (time.time() - start_time))
