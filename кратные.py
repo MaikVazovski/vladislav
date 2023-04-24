@@ -9,3 +9,5 @@ elif one_value % three_value == 0:
     print(f'Число кратно только {three_value}')
 else:
     print(f'Число не кратно {two_value} и {three_value}')
+
+
