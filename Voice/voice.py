@@ -11,4 +11,5 @@ def voice(name):
     playsound('audio.mp3')
 
 # Вызываем функцию
-voice(input('Введи текст, который будем озвучивать: '))
+while True:
+    voice(input('Введи текст, который будем озвучивать: '))

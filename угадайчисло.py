@@ -1,7 +1,7 @@
 import random
 from colorama import init
 init()
-from colorama import Fore, Back, Style
+from colorama import Fore
 a = random.randint(1,100)
 
 def random_value(input_value):
